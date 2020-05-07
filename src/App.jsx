@@ -22,7 +22,7 @@ class App extends Component {
 
   updateWeather() {
     const { cityName, numForcastDays } = this.state;
-    const URL = `https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q=${cityName}&days=${numForcastDays}`;
+    const URL = `https://cors-anywhere.herokuapp.com/https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q=${cityName}&days=${numForcastDays}`;
     axios
       .get(URL)
       .then(res => {
