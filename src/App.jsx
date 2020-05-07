@@ -7,7 +7,7 @@ import BottomSection from "./components/bottom/index";
 import axios from "axios";
 
 
-const WEATHER_KEY = "3e717cad1dd547139eb32553202504";
+const WEATHER_KEY = "83382f9a4c464dd7beb10432200705";
 
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
 
   updateWeather() {
     const { cityName, numForcastDays } = this.state;
-    const URL = `http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q=${cityName}&days=${numForcastDays}`;
+    const URL = `https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q=${cityName}&days=${numForcastDays}`;
     axios
       .get(URL)
       .then(res => {
@@ -33,8 +33,8 @@ class App extends Component {
           isLoading: false,
           temp_c: data.current.temp_c,
           temp_f: data.current.temp_f,
-        avgtemp_c:data.current.temp_c,
-        avgtemp_f:data.current.temp_f,
+          avgtemp_c:data.current.temp_c,
+          avgtemp_f:data.current.temp_f,
           day: data.current.day,
           text: data.current.condition.text,
           iconURL: data.current.condition.icon,
