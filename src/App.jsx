@@ -7,7 +7,7 @@ import BottomSection from "./components/bottom/index";
 import axios from "axios";
 
 
-const WEATHER_KEY = "83382f9a4c464dd7beb10432200705";
+const WEATHER_KEY = "157a529557244cd6817182826201105";
 
 
 class App extends Component {
